@@ -53,14 +53,6 @@ main {
     width: 100%;
   }
 
-  > .mdl-card__title {
-    color: #fff;
-    height: 176px;
-    background: url('../assets/images/yeoman.png') center / cover;
-    background-size: 110px;
-    background-repeat: no-repeat;
-  }
-
   > .mdl-card__title > .mdl-card__title-text {
     color: #000;
   }
@@ -91,6 +83,21 @@ main {
     text-align: center;
     img {
       height: 100px;
+    }
+  }
+}
+
+.bottom-snap {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  & > .btn-wrap {
+    width: 50%;
+    float: left;
+    padding: 5px;
+    box-sizing: border-box;
+    button {
+      width: 100%;
     }
   }
 }
