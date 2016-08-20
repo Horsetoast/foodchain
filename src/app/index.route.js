@@ -37,6 +37,12 @@
         templateUrl: 'app/receipt/receipt.html',
         controller: 'ReceiptController',
         controllerAs: 'main'
+      })
+      .state('future-receipt', {
+        url: '/future-receipt',
+        templateUrl: 'app/future/receipt.html',
+        controller: 'MainController',
+        controllerAs: 'main'
       });
 
     $urlRouterProvider.otherwise('/');
