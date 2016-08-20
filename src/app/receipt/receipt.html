@@ -5,30 +5,75 @@
         </div>
     </md-toolbar>
     <md-content class="layout-padding _md flex">
+
       <!-- heading part -->
-      <h1>Foodchain Inc.</h1>
-      <h2>電子發票證明聯</h2>
-      <div class="tax-quarter">105年07-08日</div>
-      <div class="receipt-id">GX-64204122</div>
+      <div id="heading-part" class="container">
+        <h1>Foodchain Inc.</h1>
+        <h2>電子發票證明聯</h2>
+        <div class="tax-quarter">105年07-08日</div>
+        <div class="serial-no">GX-64204122</div>
+      </div>
 
       <!-- info part -->
-      <div class="date">2016-08-19 22:26:51</div>
-      <div class="machine-number">隨機碼：2810</div>
-      <div class="total-price">總計：40</div>
-      <div class="seller">
-        賣方：<span class="seller-taxid">48873931</span>
-      </div>
-      <div class="buyer">
-        買方：<span class="buyer-taxid">24564936</span>
+      <div id="info-part" class="container">
+        <div class="date">2016-08-19 22:26:51</div>
+        <div class="machine-number">隨機碼：2810</div>
+        <div class="total-price">總計：40</div>
+        <div class="seller">
+          賣方：<span class="seller-taxid">48873931</span>
+        </div>
+        <div class="buyer">
+          買方：<span class="buyer-taxid">24564936</span>
+        </div>
       </div>
 
       <!-- code part -->
-      <div class="barcode">
-        <img height="50px" src="http://www.idautomation.com/free-barcode-products/scanner-ascii-decoder/scanner-control-plus-ascii.png" alt="">
+      <div id="code-part" class="container">
+        <div class="barcode">
+          <img height="50px" src="http://www.idautomation.com/free-barcode-products/scanner-ascii-decoder/scanner-control-plus-ascii.png" alt="">
+        </div>
+        <div class="qrcode">
+          <img width="100px" height="100px" src="https://midwestdental.files.wordpress.com/2011/02/video-qr-code.jpg" alt="">
+          <img width="100px" height="100px" src="https://midwestdental.files.wordpress.com/2011/02/video-qr-code.jpg" alt="">
+        </div>
       </div>
-      <div class="qrcode1" style="margin-bottom: 100px">
-        <img width="100px" height="100px" src="https://midwestdental.files.wordpress.com/2011/02/video-qr-code.jpg" alt="">
-        <img width="100px" height="100px" src="https://midwestdental.files.wordpress.com/2011/02/video-qr-code.jpg" alt="">
+
+      <!-- items part -->
+      <div id="items" class="container">
+        <table>
+          <tr>
+            <td>1.</td>
+            <!-- item name -->
+            <td>Apple</td>
+            <!-- item price -->
+            <td>50</td>
+            <!-- item quantity -->
+            <td>*2</td>
+            <!-- item total -->
+            <td>$100</td>
+          </tr>
+          <tr>
+            <td>2.</td>
+            <td>Orange</td>
+            <td>150</td>
+            <td>*2</td>
+            <td>$300</td>
+          </tr>
+          <tr>
+            <td>3.</td>
+            <td>Pieapple</td>
+            <td>300</td>
+            <td>*2</td>
+            <td>$600</td>
+          </tr>
+        </table>
+        <div class="total-price">Total: $1000</div>
+      </div>
+
+      <!-- company info -->
+      <div id="company-info" class="container">
+        <div class="address">Address: No. 1, Section 4, Roosevelt Rd, Da’an District, Taipei City, 10617</div>
+        <div class="contact">Phone: 0912988210</div>
       </div>
 
     </md-content>
