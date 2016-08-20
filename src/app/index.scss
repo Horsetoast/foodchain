@@ -67,14 +67,42 @@
   }
 }
 
-.add-product {
-  position: absolute;
+.show-product-form {
+  position: fixed;
   right: 30px;
   bottom: 80px;
 }
 
+.hide-product-form {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  text-transform: lowercase;
+}
+
 .lowercase {
   text-transform: capitalize;;
+}
+
+md-input-container {
+  margin-bottom: 0;
+}
+
+.custom-datepicker .md-datepicker-input-container {
+  margin: 0 15px 0 0;
+}
+
+// Datepicker icon
+.custom-datepicker .md-datepicker-button {
+  display: none;
+}
+
+// Datepicker label
+.custom-datepicker label {
+  left: 0px !important;
+  width: auto !important;
+  font-size: 13px;
+  line-height: 20px;
 }
 
 #main-top {

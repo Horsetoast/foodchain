@@ -7,22 +7,58 @@
     <md-content class="layout-padding _md flex">
         <div layout-gt-sm="row" class="layout-gt-sm-row">
           <h1>Products</h1>
-            <md-card class="_md">
-              <md-button class="md-raised lowercase">Rocking pineapples</md-button>
-              <md-button class="md-raised lowercase">Oriental Baking Cake</md-button>
-              <md-button class="md-raised lowercase">Rocking pineapples</md-button>
+            <md-card>
+              <md-button class="md-raised lowercase" ng-repeat="product in products">{{product.name}}</md-button>
+            </md-card>
+            <md-card style="margin-bottom: 100px;" ng-show="newProductForm">
+              <md-card-title>
+                <md-card-title-text>
+                  <span class="md-headline">New product</span>
+                </md-card-title-text>
+              </md-card-title>
+              <md-card-content>
+                <md-input-container style="margin-bottom: 0; width: 100%">
+                    <label>Name</label>
+                    <input ng-model="new.name" class="ng-pristine ng-untouched ng-valid md-input ng-empty" aria-invalid="false" style="">
+                </md-input-container>
+                <md-input-container style="margin-bottom: 0; width: 100%">
+                    <label>Price</label>
+                    <input ng-model="new.name" class="ng-pristine ng-untouched ng-valid md-input ng-empty" aria-invalid="false" style="">
+                </md-input-container>
+                <md-input-container class="md-block" style="margin-bottom: 30px;">
+                  <label>Tax Category</label>
+                  <md-select ng-model="new.taxCategory">
+                    <md-option ng-repeat="item in taxCategories" value="{{taxCategory}}">
+                      {{item.name}}
+                    </md-option>
+                  </md-select>
+                </md-input-container>
+                <md-input-container class="md-block" style="margin-bottom: 10px;">
+                  <label>FDA Category</label>
+                  <md-select ng-model="new.fdaCategory">
+                    <md-option ng-repeat="item in fdaCategories" value="{{fdaCategory}}">
+                      {{item.name}}
+                    </md-option>
+                  </md-select>
+                </md-input-container>
+                <md-input-container class="custom-datepicker">
+                  <label>Production date</label>
+                  <md-datepicker ng-model="new.ItemProductionDate"></md-datepicker>
+                </md-input-container>
+                <md-input-container class="custom-datepicker">
+                  <label>Expiration date</label>
+                  <md-datepicker ng-model="new.ItemExpirationDate"></md-datepicker>
+                </md-input-container>
+                <md-button class="md-raised md-warn">Create</md-button>
+              </md-card-content>
             </md-card>
         </div>
     </md-content>
     <!-- Colored FAB button with ripple -->
-    <md-button class="md-fab md-primary add-product" aria-label="Use Android">
+    <md-button class="md-fab md-primary show-product-form" ng-click="showProductForm()" ng-hide="newProductForm">
       <span style="font-size: 1.5em">+</span>
     </md-button>
-    <div class="bottom-snap">
-        <div class="btn-wrap" style="width: 100%">
-            <button>
-                Create
-            </button>
-        </div>
-    </div>
+    <md-button class="md-fab md-mini hide-product-form" ng-click="showProductForm()" ng-show="newProductForm">
+        <span style="font-size: 1.5em">x</span>
+    </md-button>
 </div>

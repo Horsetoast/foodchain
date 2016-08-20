@@ -7,9 +7,11 @@
 
     function Init($scope, $http) {
 
+      var companyId = 4711337;
+
       $scope.settings = {
         receiptsUrl: 'http://hackntu-foodchain.herokuapp.com/receipts',
-        productsUrl: 'http://hackntu-foodchain.herokuapp.com/products',
+        productsUrl: 'http://hackntu-foodchain.herokuapp.com/companies/'+companyId+'/products',
       }
 
       $http.get($scope.settings.productsUrl)

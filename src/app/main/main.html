@@ -13,8 +13,8 @@
             </md-input-container>
           </div>
           <div layout-gt-sm="row" class="layout-gt-sm-row">
-            <span style="padding: 10px">Items on receipt</span>
-            <md-card class="_md" style="margin-bottom: 50px; display: block; width: 100%">
+            <span style="padding-bottom: 10px; display: inline-block">Items on receipt</span>
+            <md-card class="_md" style="margin-bottom: 50px; display: block; margin: 0;">
                 <md-card-actions class="layout-row no-margin-in" ng-repeat="item in items track by $index">
                     <md-input-container class="md-block" style="width: 80%; margin-bottom: 0;">
                       <label>Items</label>
@@ -27,7 +27,6 @@
                     <md-input-container style="width: 20%; margin-bottom: 0">
                         <label>Qty</label>
                         <input ng-model="item.qty" class="ng-pristine ng-untouched ng-valid md-input ng-empty" aria-invalid="false" style="">
-                        <div class="md-errors-spacer"></div>
                     </md-input-container>
                 </md-card-actions>
                 <button class="md-button md-raised md-primary md-ink-ripple" type="button" ng-click="addItem(item)"><span class="ng-scope">Add</span>
