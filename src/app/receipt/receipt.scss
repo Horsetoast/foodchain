@@ -9,6 +9,10 @@
 #heading-part>h1 {
   font-size: 30px;
 }
+
+#heading-part>h2{
+  margin-bottom: 5px;
+}
 .tax-quarter {
   font-size: 18px;
 }
@@ -24,7 +28,6 @@
 #items {
   table {
     width: 100%;
-    margin: 20px 0;
     border-top: 1px dashed black;
     border-bottom: 1px dashed black;
     padding: 10px 10px;
@@ -32,6 +35,10 @@
   td:nth-child(5) {
     text-align: right;
   }
+}
+
+.total-price {
+  margin: 10px 0 3px;
 }
 
 // company info
