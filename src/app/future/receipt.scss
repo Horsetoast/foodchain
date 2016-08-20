@@ -1,38 +1,23 @@
-//
-// .container {
-//   max-width: 400px;
-//   text-align: center;
-//   margin: 0 auto;
-// }
-//
-// // code part
-//
-//
-// // items part
-// #items {
-//   table {
-//     width: 70%;
-//     margin: 20px 5;
-//     border-top: 1px dashed black;
-//     border-bottom: 1px dashed black;
-//     padding: 10px 10px;
-//   }
-//   td:nth-child(5) {
-//     text-align: right;
-//   }
-// }
-//
-// // company info
-// #company-info {
-//   margin-bottom: 100px;
-// }
-//
-// .table {
-//   width: 70%;
-//   margin: 0 auto;
-//   margin: 20px 5;
-//   border-top: 1px dashed black;
-//   border-bottom: 1px dashed black;
-//   padding: 10px 10px;
-//   align: center;
-// }
+
+
+md-card {
+  padding: 0 !important;
+  margin-bottom: 100px !important;
+}
+
+#company-info.card-company-info {
+  text-align: center;
+
+  .address {
+    margin-bottom: 14px;
+  }
+}
+
+.seller, .buyer {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.card-content {
+  padding: 14px 20px 8px;
+}
