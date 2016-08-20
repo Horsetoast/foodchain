@@ -6,6 +6,9 @@
 }
 
 // heading part
+#heading-part>h1 {
+  font-size: 30px;
+}
 .tax-quarter {
   font-size: 18px;
 }
@@ -38,7 +41,6 @@
   font-weight: bold;
 }
 #company-info {
-  margin-bottom: 100px;
   text-align: left;
 
   .address-title, .contact-title {
@@ -48,4 +50,8 @@
   .address, .contact {
     margin-bottom: 10px;
   }
+}
+
+.page-bottom {
+  margin-bottom: 100px;
 }
