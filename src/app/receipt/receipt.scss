@@ -1,1 +1,24 @@
 
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+// code part
+.qrcode1, .qrcode2 {
+  display: inline-block;
+}
+
+// items part
+#items {
+  table {
+    width: 100%;
+    margin: 20px 0;
+    border-top: 1px dashed black;
+    border-bottom: 1px dashed black;
+    padding: 10px 10px;
+  }
+  td:nth-child(5) {
+    text-align: right;
+  }
+}
