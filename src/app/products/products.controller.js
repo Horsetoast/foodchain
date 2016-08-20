@@ -12,6 +12,49 @@
 
     $scope.newProductForm = false;
 
+    $scope.fdaCategories = [
+      {
+        man: '肉類製品',
+        eng: 'processed meat'
+      },
+      {
+        man: '生鮮冷凍冷藏畜肉',
+        eng: 'frozen meat'
+      },
+      {
+        man: '冷凍魚產品',
+        eng: 'frozen fish'
+      },
+      {
+        man: '冷凍甲殼類產品',
+        eng: 'Frozen crustaceans'
+      },
+      {
+        man: '蔬果製品',
+        eng: 'processed vegetable'
+      },
+      {
+        man: '生鮮冷凍冷藏蔬菜',
+        eng: 'frozen vegetable'
+      },
+      {
+        man: '生鮮冷凍冷藏水果',
+        eng: 'Fresh refrigerated fruit'
+      },
+      {
+        man: '生鮮截切蔬果',
+        eng: 'fresh cut fruit'
+      },
+      {
+        man: '乳類製品',
+        eng: 'dairy products'
+      },
+      {
+        man: '鮮乳(不加糖)',
+        eng: 'milk'
+      },
+    ]
+
     $scope.showProductForm = function() {
       $scope.newProductForm = ! $scope.newProductForm;
     };

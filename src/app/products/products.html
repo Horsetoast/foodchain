@@ -25,19 +25,19 @@
                     <label>Price</label>
                     <input ng-model="new.price" class="ng-pristine ng-untouched ng-valid md-input ng-empty" aria-invalid="false" style="">
                 </md-input-container>
-                <md-input-container class="md-block" style="margin-bottom: 30px;">
+                <!-- <md-input-container class="md-block" style="margin-bottom: 30px;">
                   <label>Tax Category</label>
                   <md-select ng-model="new.taxCategory">
                     <md-option ng-repeat="item in taxCategories" value="{{taxCategory}}">
                       {{item.name}}
                     </md-option>
                   </md-select>
-                </md-input-container>
+                </md-input-container> -->
                 <md-input-container class="md-block" style="margin-bottom: 10px;">
                   <label>FDA Category</label>
                   <md-select ng-model="new.fdaCategory">
-                    <md-option ng-repeat="item in fdaCategories" value="{{fdaCategory}}">
-                      {{item.name}}
+                    <md-option ng-repeat="item in fdaCategories" value="{{item.eng}}">
+                      {{item.man}}
                     </md-option>
                   </md-select>
                 </md-input-container>
