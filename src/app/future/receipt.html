@@ -1,0 +1,75 @@
+<div ng-controller="MainController" layout="column" ng-cloak="" class="contentdemoBasicUsage">
+    <md-toolbar class="md-warn" id="main-top">
+        <div class="md-toolbar-tools">
+            <h1 class="md-flex">FoodChain Tracker</h1>
+        </div>
+    </md-toolbar>
+    <md-content class="layout-padding _md flex">
+
+      <!-- heading part -->
+      <div id="heading-part" class="container">
+        <h1>Foodchain Inc.</h1>
+        <h2>電子發票證明聯</h2>
+        <div class="tax-quarter">105年07-08日</div>
+        <div class="serial-no">GX-64204122</div>
+      </div>
+
+      <!-- info part -->
+      <div id="info-part" class="container">
+        <div class="date">2016-08-19 22:26:51</div>
+        <div class="machine-number">隨機碼：2810</div>
+        <div class="total-price">總計：40</div>
+        <div class="seller">
+          賣方：<span class="seller-taxid">48873931</span>
+        </div>
+        <div class="buyer">
+          買方：<span class="buyer-taxid">24564936</span>
+        </div>
+      </div>
+
+      <!-- code part -->
+      <div id="code-part" class="container">
+        <div class="barcode">
+          <img height="50px" src="http://www.idautomation.com/free-barcode-products/scanner-ascii-decoder/scanner-control-plus-ascii.png" alt="">
+        </div>
+        <div class="qrcode">
+          <img width="100px" height="100px" src="https://midwestdental.files.wordpress.com/2011/02/video-qr-code.jpg" alt="">
+          <img width="100px" height="100px" src="https://midwestdental.files.wordpress.com/2011/02/video-qr-code.jpg" alt="">
+        </div>
+      </div>
+
+      <!-- items part -->
+      <div id="items" class="container">
+        <table>
+          <tr ng-repeat="item in receipt.items track by $index">
+            <td>{{$index+1}}.</td>
+            <!-- item name -->
+            <td>{{item.name}}</td>
+            <!-- item price -->
+            <td>{{item.price}}</td>
+            <!-- item quantity -->
+            <td>{{item.qty}}</td>
+            <!-- item total -->
+            <td>${{item.qty*item.price}}</td>
+          </tr>
+        </table>
+        <div class="total-price">Total: $1000</div>
+      </div>
+
+      <!-- company info -->
+      <div id="company-info" class="container">
+        <div class="address-title">Address:</div>
+        <div class="address">No. 1, Section 4, Roosevelt Rd, Da’an District, Taipei City, 10617</div>
+        <div class="contact-title">Phone:</div>
+        <div class="contact">0912988210</div>
+      </div>
+
+    </md-content>
+    <div class="bottom-snap">
+        <div class="btn-wrap" style="width: 100%">
+            <button ng-click="submitReceipt()">
+                Submit Receipt
+            </button>
+        </div>
+    </div>
+</div>
