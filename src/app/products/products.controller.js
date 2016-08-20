@@ -3,10 +3,10 @@
 
   angular
     .module('foodchain')
-    .controller('TreeController', TreeController);
+    .controller('ProductsController', ProductsController);
 
   /** @ngInject */
-  function TreeController() {
+  function ProductsController() {
     var vm = this;
 
   }

@@ -1,0 +1,28 @@
+<div ng-controller="MainController" layout="column" ng-cloak="" class="contentdemoBasicUsage">
+    <md-toolbar class="md-warn" id="main-top">
+        <div class="md-toolbar-tools">
+            <h2 class="md-flex">FoodChain Tracker</h2>
+        </div>
+    </md-toolbar>
+    <md-content class="layout-padding _md flex">
+        <div layout-gt-sm="row" class="layout-gt-sm-row">
+          <h1>Products</h1>
+            <md-card class="_md">
+              <md-button class="md-raised lowercase">Rocking pineapples</md-button>
+              <md-button class="md-raised lowercase">Oriental Baking Cake</md-button>
+              <md-button class="md-raised lowercase">Rocking pineapples</md-button>
+            </md-card>
+        </div>
+    </md-content>
+    <!-- Colored FAB button with ripple -->
+    <md-button class="md-fab md-primary add-product" aria-label="Use Android">
+      <span style="font-size: 1.5em">+</span>
+    </md-button>
+    <div class="bottom-snap">
+        <div class="btn-wrap" style="width: 100%">
+            <button>
+                Create
+            </button>
+        </div>
+    </div>
+</div>
