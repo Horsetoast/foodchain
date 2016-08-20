@@ -5,8 +5,8 @@
 }
 
 // code part
-.qrcode1, .qrcode2 {
-  display: inline-block;
+.qrcode {
+  margin-bottom: 30px;
 }
 
 // items part
@@ -21,4 +21,9 @@
   td:nth-child(5) {
     text-align: right;
   }
+}
+
+// company info
+#company-info {
+  margin-bottom: 100px;
 }
