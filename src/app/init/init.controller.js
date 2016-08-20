@@ -1,18 +1,21 @@
 (function() {
   'use strict';
-
+  
   angular
     .module('foodchain')
-    .controller('Init', Init);
-
-    function Init($scope, $http) {
-
+    .controller('Init', Init)
+    .constant('config', {
+      //BaseURL: 'http://localhost:4000'
+      BaseURL: 'http://hackntu-foodchain.herokuapp.com'
+    });
+  
+    function Init($scope, $http, config) {
+      
       var companyId = 4711337;
-
-
+      
       $scope.settings = {
-        receiptsUrl: 'http://hackntu-foodchain.herokuapp.com/companies/'+companyId+'/receipts',
-        productsUrl: 'http://hackntu-foodchain.herokuapp.com/companies/'+companyId+'/products',
+        receiptsUrl: config.BaseURL+'/companies/'+companyId+'/receipts',
+        productsUrl: config.BaseURL+'/companies/'+companyId+'/products',
       }
 
       $scope.loadProducts = function() {

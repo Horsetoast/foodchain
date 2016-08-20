@@ -6,7 +6,7 @@
     .controller('TrackController', TrackController);
 
   /** @ngInject */
-  function TrackController($scope, $http, $filter, $state, $stateParams) {
+  function TrackController($scope, $http, $filter, $state, $stateParams, config) {
     var vm = this;
     var companies = {};
 
@@ -14,7 +14,7 @@
     $scope.detailId = $state.params.detail;
 
     if(typeof $scope.detailId !== "undefined") {
-      $http.get('http://hackntu-foodchain.herokuapp.com/companies/'+$scope.detailId+'/receipts')
+      $http.get(config.BaseURL+'/companies/'+$scope.detailId+'/receipts')
       .then(
           function(response){
             console.log(response);
@@ -27,7 +27,7 @@
        );
     }
 
-    $http.get('http://hackntu-foodchain.herokuapp.com/companies')
+    $http.get(config.BaseURL+'/companies')
     .then(
         function(response){
           console.log(response);
