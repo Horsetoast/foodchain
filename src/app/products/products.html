@@ -23,7 +23,7 @@
                 </md-input-container>
                 <md-input-container style="margin-bottom: 0; width: 100%">
                     <label>Price</label>
-                    <input ng-model="new.name" class="ng-pristine ng-untouched ng-valid md-input ng-empty" aria-invalid="false" style="">
+                    <input ng-model="new.price" class="ng-pristine ng-untouched ng-valid md-input ng-empty" aria-invalid="false" style="">
                 </md-input-container>
                 <md-input-container class="md-block" style="margin-bottom: 30px;">
                   <label>Tax Category</label>
@@ -43,13 +43,13 @@
                 </md-input-container>
                 <md-input-container class="custom-datepicker">
                   <label>Production date</label>
-                  <md-datepicker ng-model="new.ItemProductionDate"></md-datepicker>
+                  <md-datepicker ng-model="new.productionDateRaw"></md-datepicker>
                 </md-input-container>
                 <md-input-container class="custom-datepicker">
                   <label>Expiration date</label>
-                  <md-datepicker ng-model="new.ItemExpirationDate"></md-datepicker>
+                  <md-datepicker ng-model="new.expirationDateRaw"></md-datepicker>
                 </md-input-container>
-                <md-button class="md-raised md-warn">Create</md-button>
+                <md-button class="md-raised md-warn" ng-click="submitProduct()">Create</md-button>
               </md-card-content>
             </md-card>
         </div>

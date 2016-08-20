@@ -9,6 +9,7 @@
 
       var companyId = 4711337;
 
+
       $scope.settings = {
         receiptsUrl: 'http://hackntu-foodchain.herokuapp.com/receipts',
         productsUrl: 'http://hackntu-foodchain.herokuapp.com/companies/'+companyId+'/products',
@@ -19,6 +20,11 @@
              function(response){
                console.log(response);
                $scope.products = response.data;
+               // create new object with only id : name pair
+               $scope.productNames = {};
+               $scope.products.forEach(function(product) {
+                 $scope.productNames[product.id] = product;
+               });
              },
              function(response){
                $scope.products = [

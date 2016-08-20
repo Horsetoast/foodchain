@@ -41,30 +41,16 @@
       <!-- items part -->
       <div id="items" class="container">
         <table>
-          <tr>
-            <td>1.</td>
+          <tr ng-repeat="item in receipt.items track by $index">
+            <td>{{$index+1}}.</td>
             <!-- item name -->
-            <td>Apple</td>
+            <td>{{item.name}}</td>
             <!-- item price -->
-            <td>50</td>
+            <td>{{item.price}}</td>
             <!-- item quantity -->
-            <td>*2</td>
+            <td>{{item.qty}}</td>
             <!-- item total -->
-            <td>$100</td>
-          </tr>
-          <tr>
-            <td>2.</td>
-            <td>Orange</td>
-            <td>150</td>
-            <td>*2</td>
-            <td>$300</td>
-          </tr>
-          <tr>
-            <td>3.</td>
-            <td>Pieapple</td>
-            <td>300</td>
-            <td>*2</td>
-            <td>$600</td>
+            <td>${{item.qty*item.price}}</td>
           </tr>
         </table>
         <div class="total-price">Total: $1000</div>
