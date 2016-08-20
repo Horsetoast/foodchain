@@ -20,6 +20,18 @@
         controller: 'ProductsController',
         controllerAs: 'main'
       })
+      .state('track', {
+        url: '/track',
+        templateUrl: 'app/track/track.html',
+        controller: 'TrackController',
+        controllerAs: 'main'
+      })
+      .state('detail', {
+        url: '/track-detail/:detail',
+        templateUrl: 'app/track/track-detail.html',
+        controller: 'TrackController',
+        controllerAs: 'main'
+      })
       .state('receipt', {
         url: '/receipt',
         templateUrl: 'app/receipt/receipt.html',

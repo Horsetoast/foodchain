@@ -32,6 +32,9 @@
          .then(
              function(response){
                console.log(response);
+              //  $scope.products.push(response.data[0])
+              $scope.loadProducts();
+
              },
              function(response){
                 console.log(response);
