@@ -30,6 +30,7 @@
   function MainController($scope, $http) {
     var vm = this;
     var url = 'http://hackntu-foodchain.herokuapp.com/receipts';
+    var item = {name: '', qty: 0};
 
     $scope.taxId = '';
     $scope.items = [{
@@ -37,7 +38,7 @@
       qty: 0
     }];
 
-    $scope.addItem = function(item = {name: '', qty: 0}) {
+    $scope.addItem = function(item) {
       $scope.items.push(item);
     }
 

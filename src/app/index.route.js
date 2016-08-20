@@ -17,7 +17,14 @@
       .state('products', {
         url: '/products',
         templateUrl: 'app/products/products.html',
-        controller: 'ProductsController'
+        controller: 'ProductsController',
+        controllerAs: 'main'
+      })
+      .state('receipt', {
+        url: '/receipt',
+        templateUrl: 'app/receipt/receipt.html',
+        controller: 'ReceiptController',
+        controllerAs: 'main'
       });
 
     $urlRouterProvider.otherwise('/');
