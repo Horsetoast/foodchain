@@ -70,17 +70,24 @@
       <div class="page-bottom"></div>
 
     </md-content>
-    <md-content ng-show="receiptStatus === 'sent'">
+    <md-content ng-show="receiptStatus === 'sent'" style="padding: 30px;">
       <h2>
         Receipt submitted.
       </h2>
     </md-content>
 
     <div class="bottom-snap">
-        <div class="btn-wrap" style="width: 100%">
-            <button ng-click="submitReceipt()" class="primary">
-                Submit Receipt
-            </button>
-        </div>
+      <div class="btn-wrap" style="width: 100%" ng-show="receiptStatus !== 'sent'">
+        <button ng-click="submitReceipt()" class="primary">
+          Submit Receipt
+        </button>
+      </div>
+      
+      <div class="btn-wrap" style="width: 100%" ng-show="receiptStatus === 'sent'">
+        <button ng-click="resetHome()" class="primary">
+          Back to Home Screen
+        </button>
+      </div>
+
     </div>
 </div>

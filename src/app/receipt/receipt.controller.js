@@ -6,7 +6,7 @@
     .controller('ReceiptController', ReceiptController);
 
   /** @ngInject */
-  function ReceiptController($scope, $http) {
+  function ReceiptController($scope, $http, $state) {
     var vm = this;
 
     $scope.receiptStatus = "none";
@@ -35,6 +35,10 @@
                 console.log(response);
              }
           );
+    }
+
+    $scope.resetHome = function() {
+      $state.go("home", {action: "clear"});
     }
   }
 })();
