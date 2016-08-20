@@ -5,7 +5,7 @@
         </div>
     </md-toolbar>
     <md-content class="layout-padding _md flex">
-        <div layout-gt-sm="row" class="layout-gt-sm-row">
+        <div>
           <h1>Products</h1>
             <md-card>
               <md-button class="md-raised lowercase" ng-repeat="product in products">{{product.name}}</md-button>
@@ -61,4 +61,11 @@
     <md-button class="md-fab md-mini hide-product-form" ng-click="showProductForm()" ng-show="newProductForm">
         <span style="font-size: 1.5em">x</span>
     </md-button>
+</div>
+<div class="bottom-snap">
+    <div class="btn-wrap" style="width: 100%">
+        <button ui-sref="home" class="secondary">
+            Return
+        </button>
+    </div>
 </div>

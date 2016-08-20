@@ -1,10 +1,11 @@
 <div ng-controller="MainController" layout="column" ng-cloak="" class="contentdemoBasicUsage">
+  <div>
     <md-toolbar class="md-warn" id="main-top">
         <div class="md-toolbar-tools">
             <h1 class="md-flex">FoodChain Tracker</h1>
         </div>
     </md-toolbar>
-    <md-content class="layout-padding _md flex">
+    <md-content class="layout-padding _md flex" ng-show="receiptStatus === 'ready'">
 
       <!-- heading part -->
       <div id="heading-part" class="container">
@@ -61,11 +62,19 @@
         <div class="address">Address: No. 1, Section 4, Roosevelt Rd, Da’an District, Taipei City, 10617</div>
         <div class="contact">Phone: 0912988210</div>
       </div>
+    </div>
+
 
     </md-content>
+    <md-content ng-show="receiptStatus === 'sent'">
+      <h2>
+        Receipt submitted.
+      </h2>
+    </md-content>
+
     <div class="bottom-snap">
         <div class="btn-wrap" style="width: 100%">
-            <button ng-click="submitReceipt()">
+            <button ng-click="submitReceipt()" class="primary">
                 Submit Receipt
             </button>
         </div>

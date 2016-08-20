@@ -5,6 +5,10 @@
 // bower:scss
 // endbower
 
+body {
+  // overflow-x: hidden;
+}
+
 @import url(http://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
 
 @font-face {
@@ -55,14 +59,10 @@
     button {
       width: 100%;
       margin: 0;
-      background: darken(#5543dd, 20%);
       border: none;
       padding: 20px;
       color: #fff;
       display: inline-block;
-    }
-    button.second {
-      background: darken(#5543dd, 10%);
     }
   }
 }
@@ -106,9 +106,27 @@ md-input-container {
 }
 
 #main-top {
-  background: orange;
+  background: darkblue;
   color: #fff;
 }
+
+.disabled {
+  background: grey !important;
+  color: silver !important;
+}
+
+button.primary {
+  background: saturate(lighten(purple, 5%), 20%);
+}
+button.secondary {
+  background: saturate(darken(purple, 5%), 40%);
+}
+button.terciary {
+  background: darken(saturate(purple, 15%), 10%);
+}
+
+
+
 
 
 /**

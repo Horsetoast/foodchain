@@ -12,8 +12,8 @@
                 <div class="md-errors-spacer"></div>
             </md-input-container>
           </div>
-          <div layout-gt-sm="row" class="layout-gt-sm-row">
-            <span style="padding-bottom: 10px; display: inline-block">Items on receipt</span>
+          <div>
+            <span style="padding-bottom: 10px; display: inline-block">Add items to receipt</span>
             <md-card class="_md" style="margin-bottom: 50px; display: block; margin: 0;">
                 <md-card-actions class="layout-row no-margin-in" ng-repeat="item in items track by $index">
                     <md-input-container class="md-block" style="width: 80%; margin-bottom: 0;">
@@ -35,9 +35,19 @@
         </div>
     </md-content>
     <div class="bottom-snap">
-        <div class="btn-wrap" style="width: 100%">
-            <button ng-click="createReceipt()">
+        <div class="btn-wrap" style="width: 100%;">
+            <button ng-click="createReceipt()" class="primary" ng-class="{'disabled' : items.length === 0}">
                 Create Receipt
+            </button>
+        </div>
+        <div class="btn-wrap" style="width: 100%">
+            <button ui-sref="products" class="secondary">
+                Add products
+            </button>
+        </div>
+        <div class="btn-wrap" style="width: 100%">
+            <button ui-sref="track" class="terciary">
+                Track
             </button>
         </div>
     </div>

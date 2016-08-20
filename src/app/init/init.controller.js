@@ -11,33 +11,37 @@
 
 
       $scope.settings = {
-        receiptsUrl: 'http://hackntu-foodchain.herokuapp.com/receipts',
+        receiptsUrl: 'http://hackntu-foodchain.herokuapp.com/companies/'+companyId+'/receipts',
         productsUrl: 'http://hackntu-foodchain.herokuapp.com/companies/'+companyId+'/products',
       }
 
-      $http.get($scope.settings.productsUrl)
-         .then(
-             function(response){
-               console.log(response);
-               $scope.products = response.data;
-               // create new object with only id : name pair
-               $scope.productNames = {};
-               $scope.products.forEach(function(product) {
-                 $scope.productNames[product.id] = product;
-               });
-             },
-             function(response){
-               $scope.products = [
-                 {
-                   name: 'Flour',
-                   price: 40,
-                   taxCategory: "food",
-                   fdaCategory: "agriculture",
-                 }
-               ];
-                console.log(response);
-             }
-          );
+      $scope.loadProducts = function() {
+        $http.get($scope.settings.productsUrl)
+           .then(
+               function(response){
+                 console.log(response);
+                 $scope.products = response.data;
+                 // create new object with only id : name pair
+                 $scope.productNames = {};
+                 $scope.products.forEach(function(product) {
+                   $scope.productNames[product.id] = product;
+                 });
+               },
+               function(response){
+                 $scope.products = [
+                   {
+                     name: 'Flour',
+                     price: 40,
+                     taxCategory: "food",
+                     fdaCategory: "agriculture",
+                   }
+                 ];
+                  console.log(response);
+               }
+            );
+      }
+
+      $scope.loadProducts();
 
       $scope.items = [];
 
