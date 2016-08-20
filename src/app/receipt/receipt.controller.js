@@ -10,10 +10,15 @@
     var vm = this;
 
     $scope.receiptStatus = "none";
+    $scope.total = 0;
 
     if($scope.receipt.items.length > 0) {
       $scope.receiptStatus = "ready";
     }
+
+    $scope.receipt.items.forEach(function(val) {
+      $scope.total += val.qty * val.price;
+    });
 
     $scope.submitReceipt = function() {
       console.log($scope.receipt);
