@@ -1,28 +1,25 @@
 <div ng-controller="MainController" layout="column" ng-cloak="" class="contentdemoBasicUsage">
     <md-toolbar class="md-warn" id="main-top">
         <div class="md-toolbar-tools">
-            <h1 class="md-flex">FoodChain Tracker</h1>
+            <h1 class="md-flex">nestblock RECEIPTS</h1>
         </div>
     </md-toolbar>
-    <md-content class="layout-padding _md flex" ng-show="companyExists && detailReceipts">
+    <md-content class="layout-padding _md flex" ng-show="detailReceipts">
         <div>
           <h2>
             {{detailReceipts.name}}
           </h2>
           <br><br>
           <label>Sold to:</label>
-          <md-card ng-repeat="receipt in detailReceipts.sellTo">
-              <md-button class="md-raised lowercase" ng-repeat="item in receipt.items" style="display: block" ui-sref="detail({detail: receipt.buyerCompanyID})">{{item.name}}</md-button>
+          <md-card ng-repeat="receipt in detailReceipts.sellTo" ng-if="receipt.buyerCompany">
+            <md-button class="md-raised lowercase" style="display: block" ui-sref="detail({detail: receipt.buyerCompanyID})">{{receipt.buyerCompany}} (<span ng-repeat="it in receipt.items">{{it.name}}</span>)</md-button>
           </md-card>
           <br><br>
           <label>Bought from:</label>
           <md-card ng-repeat="receipt in detailReceipts.buyFrom">
-              <md-button class="md-raised lowercase" ng-repeat="item in receipt.items" style="display: block" ui-sref="detail({detail: receipt.companyID})">{{item.name}}</md-button>
+              <md-button class="md-raised lowercase" style="display: block" ui-sref="detail({detail: receipt.companyID})">{{receipt.company}} (<span ng-repeat="it in receipt.items">{{it.name}}</span>)</md-button>
           </md-card>
         </div>
-    </md-content>
-    <md-content class="layout-padding _md flex" ng-hide="companyExists">
-      <span>Item has not been resold yet.</span>
     </md-content>
 </div>
 <div class="bottom-snap">
