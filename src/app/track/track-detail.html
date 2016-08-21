@@ -12,7 +12,7 @@
           <br><br>
           <label>Sold to:</label>
           <md-card ng-repeat="receipt in detailReceipts.sellTo" ng-if="receipt.buyerCompany">
-            <md-button class="md-raised lowercase" style="display: block" ui-sref="detail({detail: receipt.buyerCompanyID})">{{receipt.buyerCompany}} (<span ng-repeat="it in receipt.items">{{it.name}}</span>)</md-button>
+            <md-button ng-disabled="receipt.buyerCompany == 'Customer'" class="md-raised lowercase" style="display: block" ui-sref="detail({detail: receipt.buyerCompanyID})">{{receipt.buyerCompany}} (<span ng-repeat="it in receipt.items">{{it.name}}</span>)</md-button>
           </md-card>
           <br><br>
           <label>Bought from:</label>
